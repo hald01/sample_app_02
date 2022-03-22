@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       redirect_to @user
     else
       
-      render 'new'
+      render 'new', status: :unprocessable_entity
       
     end
   end
