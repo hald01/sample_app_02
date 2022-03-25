@@ -3,6 +3,6 @@
     <%= link_to user.name, user %>
     <% if current_user.admin? && !current_user?(user) %>
         <a>|</a>
-        <%= link_to "delete", delete_path , method: :delete, data: { confirm: "You sure?" } %>
+        <%= link_to "delete te te", "users/#{user.id}" , data: { "turbo-method": :delete} %>
     <% end %>
 </li>
