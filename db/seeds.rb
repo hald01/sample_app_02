@@ -15,13 +15,26 @@ User.create(   name: "Example User 0001",
                 activated_at: Time.zone.now
             )
 # Generate a bunch of additional users.
-for a in 2..100 do
+for a in 2...5 do
     User.create(   name: "Example User 000#{a}",
                 email: "example000#{a}@railstutorial.org",
                 password: "123456",
                 password_confirmation: "123456",
                 activated: true,
                 activated_at: Time.zone.now
-            )
-    
+            )    
+    for b in 1..40 do
+        users = User.order(:created_at)
+        content = "user --#{a}-- comment --000#{b}000--"
+        users.each { |user| user.microposts.create!(content: content) }
+    end
+end
+for a in 5..100 do
+    User.create(   name: "Example User 000#{a}",
+                email: "example000#{a}@railstutorial.org",
+                password: "123456",
+                password_confirmation: "123456",
+                activated: true,
+                activated_at: Time.zone.now
+            )    
 end
