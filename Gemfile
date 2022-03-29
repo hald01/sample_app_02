@@ -54,11 +54,17 @@ gem 'pry'
 gem 'byebug'
 #
 gem 'jquery-rails'
-#
+# 
 gem 'faker', '2.1.2'
 #
 gem 'will_paginate'#, '3.1.8'
 gem 'bootstrap-will_paginate'#, '1.0.0'
+# gem xac thuc dinh dang, kich thuoc hinh anh
+gem 'active_storage_validations', '0.9.5'
+# gem xu ly hinh anh
+gem 'image_processing', '1.12.1'
+gem 'mini_magick', '4.11.0'
+#
 
 # Use Sass to process CSS
 gem "sassc-rails"
