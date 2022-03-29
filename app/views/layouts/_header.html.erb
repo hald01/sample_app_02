@@ -8,10 +8,10 @@
                 <% if logged_in? %>
                     <li><%= link_to "Users", users_path %></li>
                     <li class="dropdown">
-                        <a class="btn btn-secondary dropdown-toggle" data-toggle="dropdown-menu">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" >
                             Account <b class="caret"></b>
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-toggle">
                             <li><%= link_to "Profile", current_user %></li>
                             <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                             <li class="divider"></li>
